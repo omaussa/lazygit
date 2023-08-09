@@ -79,9 +79,9 @@ func (self *RebaseCommands) SetCommitAuthor(commits []*models.Commit, index int,
 	})
 }
 
-func (self *RebaseCommands) AddCommitCoauthor(commits []*models.Commit, index int, value string) error {
+func (self *RebaseCommands) AddCommitCoAuthor(commits []*models.Commit, index int, value string) error {
 	return self.GenericAmend(commits, index, func() error {
-		return self.commit.AddCoauthor(commits[index].Sha, value)
+		return self.commit.AddCoAuthor(commits[index].Sha, value)
 	})
 }
 

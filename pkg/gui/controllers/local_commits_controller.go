@@ -620,7 +620,7 @@ func (self *LocalCommitsController) addCoAuthor() error {
 		HandleConfirm: func(value string) error {
 			return self.c.WithWaitingStatus(self.c.Tr.AmendingStatus, func(gocui.Task) error {
 				self.c.LogAction(self.c.Tr.Actions.AddCommitCoAuthor)
-				if err := self.c.Git().Rebase.AddCommitCoauthor(self.c.Model().Commits, self.context().GetSelectedLineIdx(), value); err != nil {
+				if err := self.c.Git().Rebase.AddCommitCoAuthor(self.c.Model().Commits, self.context().GetSelectedLineIdx(), value); err != nil {
 					return self.c.Error(err)
 				}
 				return self.c.Refresh(types.RefreshOptions{Mode: types.ASYNC})
