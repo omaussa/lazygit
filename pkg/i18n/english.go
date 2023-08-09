@@ -103,8 +103,10 @@ type TranslationSet struct {
 	AmendToCommit                       string
 	ResetAuthor                         string
 	SetAuthor                           string
+	AddCoAuthor                         string
 	SetResetCommitAuthor                string
 	SetAuthorPromptTitle                string
+	AddCoAuthorPromptTitle              string
 	SureResetCommitAuthor               string
 	RenameCommitEditor                  string
 	NoCommitsThisBranch                 string
@@ -674,6 +676,7 @@ type Actions struct {
 	AmendCommit                       string
 	ResetCommitAuthor                 string
 	SetCommitAuthor                   string
+	AddCommitCoAuthor                 string
 	RevertCommit                      string
 	CreateFixupCommit                 string
 	SquashAllAboveFixupCommits        string
@@ -890,8 +893,10 @@ func EnglishTranslationSet() TranslationSet {
 		AmendToCommit:                       "Amend commit with staged changes",
 		ResetAuthor:                         "Reset author",
 		SetAuthor:                           "Set author",
+		AddCoAuthor:                         "Add co-author",
 		SetResetCommitAuthor:                "Set/Reset commit author",
 		SetAuthorPromptTitle:                "Set author (must look like 'Name <Email>')",
+		AddCoAuthorPromptTitle:              "Add co-author (must look like 'Name <Email>')",
 		SureResetCommitAuthor:               "The author field of this commit will be updated to match the configured user. This also renews the author timestamp. Continue?",
 		RenameCommitEditor:                  "Reword commit with editor",
 		Error:                               "Error",
