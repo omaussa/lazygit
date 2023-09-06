@@ -47,10 +47,8 @@ func (self *CommitCommands) AddCoAuthor(sha string, value string) error {
 
 	message = message + fmt.Sprintf("\nCo-authored-by: %s", value)
 
-	args := []string{"-m", message}
 	cmdArgs := NewGitCmd("commit").
-		Arg("--allow-empty", "--amend", "--only").
-		Arg(args...).
+		Arg("--allow-empty", "--amend", "--only", "-m", message).
 		ToArgv()
 
 	return self.cmd.New(cmdArgs).Run()

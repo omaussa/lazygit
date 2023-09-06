@@ -107,6 +107,7 @@ type TranslationSet struct {
 	SetResetCommitAuthor                string
 	SetAuthorPromptTitle                string
 	AddCoAuthorPromptTitle              string
+	AddCoAuthorTooltip                  string
 	SureResetCommitAuthor               string
 	RenameCommitEditor                  string
 	NoCommitsThisBranch                 string
@@ -897,6 +898,7 @@ func EnglishTranslationSet() TranslationSet {
 		SetResetCommitAuthor:                "Set/Reset commit author",
 		SetAuthorPromptTitle:                "Set author (must look like 'Name <Email>')",
 		AddCoAuthorPromptTitle:              "Add co-author (must look like 'Name <Email>')",
+		AddCoAuthorTooltip:                  "Add co-author using the Github/Gitlab metadata Co-authored-by",
 		SureResetCommitAuthor:               "The author field of this commit will be updated to match the configured user. This also renews the author timestamp. Continue?",
 		RenameCommitEditor:                  "Reword commit with editor",
 		Error:                               "Error",

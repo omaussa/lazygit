@@ -625,7 +625,7 @@ func (self *LocalCommitsController) amendAttribute(commit *models.Commit) error 
 				Label:   self.c.Tr.AddCoAuthor,
 				OnPress: self.addCoAuthor,
 				Key:     'c',
-				Tooltip: "Add co-author using the Github/Gitlab metadata Co-authored-by",
+				Tooltip: self.c.Tr.AddCoAuthorTooltip,
 			},
 		},
 	})
